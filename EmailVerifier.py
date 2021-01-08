@@ -13,7 +13,7 @@ gmail_reg = '^[a-z0-9](\.?[a-z0-9]){5,30}@g(oogle)?mail\.com$'
 hotmail_reg = '^[a-zA-Z0-9-_\.+]{5,}@(live|hotmail)(\.[a-z]{2,3}){1,2}'
 
 #You can add the required domains yourself
-doms = ['@hotmail.com', '@gmail.com']
+doms = ['@gmail.com']
 
 #Temporary Class to facilitate better handling 
 class data:
@@ -30,13 +30,13 @@ with open("Names.txt", "r") as NamesFile:
   
 			mail = name + domain
 
-			if re.search(gmail_reg, mail) or re.search(hotmail_reg, mail):  
+			if re.search(gmail_reg, mail) :  
 
 				try:
 					data = client.get(mail)
 					
 				except Exception as e:
-					print("dadadadad")
+					
 					data.smtp_check = 'False'
 					print(e.with_traceback)
             
