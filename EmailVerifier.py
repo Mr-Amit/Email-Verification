@@ -10,7 +10,7 @@ client = Client('at_1bTGUCnOaIIaxviZfTVSSFhCEJWd6')
 
 #Regular Experessions
 gmail_reg = '^[a-z0-9](\.?[a-z0-9]){5,30}@g(oogle)?mail\.com$'
-hotmail_reg = '^[a-zA-Z0-9_\.+]{5,}@(live|hotmail)(\.[a-z]{2,3}){1,2}'
+hotmail_reg = '^[a-zA-Z0-9-_\.+]{5,}@(live|hotmail)(\.[a-z]{2,3}){1,2}'
 
 #You can add the required domains yourself
 doms = ['@hotmail.com', '@gmail.com']
